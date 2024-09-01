@@ -1,0 +1,78 @@
+.events-page {
+  padding: 40px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.events-page h1 {
+  font-family: "Playwrite CU", cursive;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Space between the items */
+  justify-items: center; /* Center align items within their grid cells */
+}
+
+.event-card {
+  background: rgba(0, 0, 0, 0);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s, color 0.3s; /* Adding color transition */
+  width: 100%;
+  max-width: 300px;
+  color: #fff;
+  text-decoration: none;
+  position: relative; /* Positioning for the underline */
+}
+
+.event-card h2 {
+  font-family: "Playwrite CU", cursive;
+  font-size: 1.5rem;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+/* Underline effect on hover */
+.event-card:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px; /* Thin underline */
+  background: #fff;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: 10px; /* Position underline below the text */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.event-card:hover:after {
+  width: 50%; /* Underline grows to 50% width of the card */
+}
+
+.event-card:hover {
+  transform: translateY(-10px); /* Lift card on hover */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Slightly brighter background on hover */
+}
+
+/* Click effect */
+.event-card:active {
+  transform: translateY(-5px) scale(0.98); /* Slight shrink and move */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Slightly more prominent background on click */
+}

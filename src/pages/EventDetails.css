@@ -1,0 +1,16 @@
+.event-details {
+  text-align: center;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.event-details h2 {
+  font-family: "Playwrite CU", cursive;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.event-details p {
+  font-size: 1.2rem;
+  color: #bbb;
+}

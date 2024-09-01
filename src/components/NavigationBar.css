@@ -1,0 +1,57 @@
+/* Styling for the Navigation Bar */
+.transparent-bar {
+  background: rgba(0, 0, 0, 0); /* Fully transparent background */
+  display: flex;
+  justify-content: space-around; /* Evenly space items */
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding for consistent spacing */
+  position: fixed; /* Keeps the bar fixed at the top */
+  top: 0;
+  left: 0; /* Ensure full-width coverage */
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  transition: background 0.3s ease; /* Smooth transition effect for background */
+  box-sizing: border-box; /* Include padding in the element’s total width */
+}
+
+/* Links inside the navigation bar */
+.transparent-bar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 15px; /* Add padding to ensure clickable area */
+  transition: color 0.3s, border-bottom 0.3s; /* Smooth transitions for hover effects */
+  flex: 1; /* Make each link take equal space */
+  text-align: center; /* Center align the text */
+  min-width: 80px; /* Set a minimum width to avoid shrinking */
+  position: relative; /* Required for underline */
+}
+
+/* Hover effect for navigation links */
+.transparent-bar a:hover {
+  color: #fff;
+}
+
+.transparent-bar a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.5px; /* Further reduced underline thickness */
+  background: #fff;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -2px; /* Position underline just below the text */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Hover underline effect */
+.transparent-bar a:hover:after {
+  width: 40%; /* Smaller width underline on hover */
+}
+
+/* Active link styling to highlight the current page */
+.transparent-bar .active-link:after {
+  width: 40%; /* Smaller width underline for the active link */
+}

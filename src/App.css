@@ -1,0 +1,93 @@
+/* Import the Poppins and Playwrite CU fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CU&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: url("./assets/bgg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+.playwrite-cu-unique {
+  font-family: "Playwrite CU", cursive;
+  font-weight: 400;
+  font-size: 4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: smoothTyping 3.5s steps(40) forwards; /* Smooth typing animation */
+}
+
+@keyframes smoothTyping {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  text-align: center; /* Center-align the subtitle */
+  width: fit-content; /* Adjust width to fit the content */
+  margin-left: auto; /* Centers the subtitle horizontally */
+  margin-right: auto; /* Centers the subtitle horizontally */
+}
+
+.page-content {
+  animation: popIn 0.5s ease-in-out forwards;
+  margin-top: 60px; /* Prevent overlap with the fixed navbar */
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.events-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.events-list li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.events-list li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.events-list a {
+  text-decoration: none;
+  color: #fff;
+}
