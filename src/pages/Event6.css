@@ -1,0 +1,86 @@
+.event6-container {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 80px; /* Add spacing from the top to avoid collision with the navigation bar */
+}
+
+.image-section {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.event-image {
+  width: 100%;
+  max-width: 300px; /* Adjust the size of the image */
+  height: auto;
+  border-radius: 8px;
+}
+
+.text-section {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px; /* Ensure the section is well spaced */
+}
+
+.event-title {
+  font-family: "Playwrite CU", cursive;
+  font-size: 2.5rem;
+  margin: 20px auto; /* Center the title */
+  color: #fff;
+}
+
+.serene-line {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: justify; /* Justify the text for cleaner layout */
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    flex-direction: row; /* Split layout for larger screens */
+  }
+
+  .image-section {
+    padding: 20px; /* Adjust padding for larger screens */
+  }
+
+  .event-image {
+    max-width: 400px; /* Increase image size for larger screens */
+  }
+
+  .serene-line {
+    font-size: 1.75rem; /* Larger text size for bigger screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .text-section {
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  .event-title {
+    font-size: 2rem; /* Adjust title size for smaller screens */
+  }
+
+  .serene-line {
+    font-size: 1.25rem; /* Adjust text size for smaller screens */
+  }
+}
